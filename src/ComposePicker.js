@@ -134,8 +134,8 @@ export default class ComposePicker extends Component {
           this.props.ButtonStyle
         ]}
       >
-        <Text style={[{ fontSize: 20 }, this.props.ButtonTextStyle]}>
-          {this.props.ButtonText ? this.props.ButtonText : '送出'}
+        <Text style={[{ fontSize: 20 }, this.props.buttonTextStyle]}>
+          {this.props.buttonText ? this.props.buttonText : '送出'}
         </Text>
       </TouchableHighlight>
     );
