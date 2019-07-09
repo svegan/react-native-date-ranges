@@ -55,8 +55,8 @@ export default class DateRange extends Component {
       startDate: props.startDate || "",
       endDate: props.endDate || "",
       focus: props.focusedInput || "startDate",
-      clearStart: "",
-      clearEnd: "",
+      clearStart: props.startDate && props.startDate.format(headFormat) || "",
+      clearEnd: props.endDate && endDate.format(headFormat) || "",
       clearSingle: props.currentDate.format(defalutFormat) || "",
       selectState: "monthAndDate", // or year
       selectedYear: null
