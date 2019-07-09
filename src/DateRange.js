@@ -49,6 +49,7 @@ export default class DateRange extends Component {
     super(props);
     const defalutFormat =
       !props.mode || props.mode === "single" ? "ddd, MMM D" : "MMM DD,YYYY";
+    const headFormat = this.props.headFormat || defalutFormat;
     this.state = {
       focusedMonth: moment().startOf("month"),
       currentDate: props.currentDate || moment(),
