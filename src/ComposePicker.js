@@ -181,6 +181,8 @@ export default class ComposePicker extends Component {
                   isDateBlocked={this.isDateBlocked}
                   startDate={this.state.startDate}
                   endDate={this.state.endDate}
+                  startDatePlaceholder={this.props.startDatePlaceholder}
+                  endDatePlaceholder={this.props.endDatePlaceholder}
                   focusedInput={this.state.focus}
                   selectedBgColor={this.props.selectedBgColor || undefined}
                   selectedTextColor={this.props.selectedTextColor || undefined}
