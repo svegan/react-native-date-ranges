@@ -169,11 +169,11 @@ export default class DateRange extends Component {
               <Text style={markTitle}>{markText}</Text>
               <View style={styles.dateContainer}>
                 <Text style={headerDate}>
-                  {this.state.clearStart ? this.state.clearStart : "Start Date"}
+                  {this.state.clearStart ? this.state.clearStart : this.props.startDatePlaceholder || "Start Date"}
                 </Text>
                 <Text style={styles.headTitleText} />
                 <Text style={headerDate}>
-                  {this.state.clearEnd ? this.state.clearEnd : "End Date"}
+                  {this.state.clearEnd ? this.state.clearEnd : this.props.endDatePlaceholder || "End Date"}
                 </Text>
               </View>
             </View>
@@ -259,6 +259,8 @@ DateRange.propTypes = {
   date: PropTypes.instanceOf(moment),
   startDate: PropTypes.instanceOf(moment),
   endDate: PropTypes.instanceOf(moment),
+  startDatePlaceholder: PropTypes.string,
+  endDatePlaceholder: PropTypes.string,
   focusedInput: PropTypes.oneOf(["startDate", "endDate"]),
   onDatesChange: PropTypes.func,
   isDateBlocked: PropTypes.func,
